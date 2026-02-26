@@ -274,13 +274,13 @@ h3 {
     text-align: center;
     position: relative;
     display: table;
-    /* Allows centering with margin auto while fitting content */
+    /* Permite centralizar com margem automática, ajustando o conteúdo conforme necessário. */
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
-    /* Prevent overflow */
+    /* Evitar transbordamento */
     word-break: break-word;
-    /* Ensure long words don't overflow */
+    /* Garantir que palavras longas não transbordem. */
 }
 
 .section-title::after {
@@ -292,11 +292,11 @@ h3 {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    /* This is fine for the underline itself relative to the title */
+    /* Isso é perfeitamente aceitável para o sublinhado em relação ao título. */
     border-radius: 2px;
 }
 
-/* Timeline */
+/* Timeline/Linha do tempo */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -360,7 +360,7 @@ h3 {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Skills */
+/* Skills/Habilidades */
 .skill-category {
     margin-bottom: 50px;
 }
@@ -409,7 +409,7 @@ h3 {
     transform: scale(1.1);
 }
 
-/* Projects */
+/* Projetos */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -494,7 +494,7 @@ h3 {
     color: var(--primary-color);
 }
 
-/* Contact */
+/* Contato */
 .contact-wrapper {
     display: flex;
     justify-content: space-around;
@@ -509,7 +509,7 @@ h3 {
 
 .contact-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
     font-size: 1.2rem;
     margin-bottom: 20px;
@@ -601,9 +601,9 @@ footer {
 
     .hero {
         padding-top: 100px;
-        /* More space for fixed nav */
+        /* Mais espaço para navegação fixa */
         min-height: auto;
-        /* Allow content to dictate height */
+        /* Permitir que o conteúdo determine a altura */
         padding-bottom: 50px;
     }
 
@@ -613,13 +613,13 @@ footer {
         gap: 40px;
     }
 
-    /* Make sure image shows on mobile and is centered */
+    /* Certifique-se de que a imagem seja exibida corretamente em dispositivos móveis e esteja centralizada. */
     .visual-content {
         display: flex;
         height: auto;
         justify-content: center;
         order: -1;
-        /* Show image above text on mobile for verification/impact */
+        /* Exibir imagem acima do texto em dispositivos móveis para verificação/impacto. */
         margin-bottom: 20px;
     }
 
@@ -638,7 +638,7 @@ footer {
 
     .section-title {
         font-size: 1.8rem;
-        /* Reduced from 2rem to ensure fit */
+        /* Reduzido de 2rem para garantir o ajuste. */
         margin-bottom: 40px;
     }
 
@@ -665,7 +665,7 @@ footer {
     }
 }
 
-/* Small Screens (max-width: 480px) */
+/* Telas pequenas/Small Screens (max-width: 480px) */
 @media (max-width: 480px) {
     .name {
         font-size: 2.2rem;
@@ -695,7 +695,7 @@ footer {
     }
 }
 
-/* Back to Top Button */
+/* Botão Voltar ao Topo */
 .btn-back-to-top {
     position: fixed;
     bottom: 30px;
@@ -727,7 +727,7 @@ footer {
     background: white;
     transform: translateY(-5px);
 }
-/* Services */
+/* Serviços */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

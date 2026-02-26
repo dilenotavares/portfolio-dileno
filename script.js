@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Dynamic Year in Footer
+    // Ano dinâmico no rodapé
     const yearElement = document.getElementById('year');
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
 
-    // Mobile Navigation Toggle
+    // Alternar navegação móvel
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Smooth Scrolling for Anchors
+    // Rolagem suave para âncoras
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            navLinks.classList.remove('active'); // Close menu on click
+            navLinks.classList.remove('active'); // Fechar menu ao clicar
 
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
@@ -36,12 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Scroll Animation (Fade In Up)
+    // Animação de rolagem (aparece gradualmente para cima)
     const observerOptions = {
         threshold: 0.1
     };
 
-    // Back to Top Button Logic
+    // Lógica do botão Voltar ao topo
     const backToTopBtn = document.querySelector('.btn-back-to-top');
 
     window.addEventListener('scroll', () => {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Add 'fade-in-up' class to elements we want to animate
+    // Adicione a classe 'fade-in-up' aos elementos que deseja animar. Certifique-se de que o CSS para esta classe esteja definido para criar o efeito desejado.
     const animateElements = document.querySelectorAll('.section-title, .timeline-item, .skill-card, .project-card, .contact-wrapper');
 
     animateElements.forEach(el => {
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Handle intersection changes
+    // Gerenciar mudanças de interseção para garantir que os elementos animados sejam visíveis quando estiverem na viewport, mesmo que o usuário role rapidamente ou se o navegador não disparar eventos de scroll como esperado.
     const handleScrollAnimation = () => {
         animateElements.forEach(el => {
             if (el.classList.contains('visible')) {
@@ -91,9 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Need to constantly check or use the observer callback better
-    // The observer callback above already adds the class. We just need to ensure CSS picks it up or we set inline styles there.
-    // Modified observer callback to set styles directly for simplicity/reliability without extra CSS class rules
+    // É necessário verificar constantemente ou usar melhor o retorno de chamada do observador.
+    // A função de retorno de chamada do observador acima já adiciona a classe. Precisamos apenas garantir que o CSS a reconheça ou definir estilos embutidos nela.
+    // Função de retorno de chamada do observador modificada para definir estilos diretamente, visando simplicidade e confiabilidade, sem regras adicionais de classe CSS.
 
     const styleObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
