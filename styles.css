@@ -62,6 +62,7 @@ h3 {
     width: 100%;
     padding: 20px 0;
     background: rgba(13, 13, 17, 0.8);
+    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     z-index: 1000;
     border-bottom: 1px solid var(--glass-border);
@@ -534,6 +535,22 @@ h3 {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.placeholder-img.project-placeholder {
+    background: linear-gradient(45deg, #1a1a2e, #16213e);
+}
+
+.placeholder-img.project-placeholder {
+    background: linear-gradient(45deg, #e056fd, #686de0);
+}
+
+.placeholder-img.advocacia-gradient {
+    background: linear-gradient(45deg, #2c3e50, #34495e);
+}
+
+.placeholder-img.pet-shop-gradient {
+    background: linear-gradient(45deg, #ff6b6b, #ffa502);
+}
+
 .qr-placeholder {
     width: 150px;
     height: 150px;
@@ -602,7 +619,7 @@ footer {
     .hero {
         padding-top: 100px;
         /* Mais espaço para navegação fixa */
-        min-height: auto;
+        min-height: 0;
         /* Permitir que o conteúdo determine a altura */
         padding-bottom: 50px;
     }
