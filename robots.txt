@@ -1,0 +1,18 @@
+# robots.txt para meu portfólio
+# Permite rastreamento geral, bloqueia áreas administrativas e arquivos sensíveis
+User-agent: *
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /private/
+Disallow: /config/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /*.log$
+Disallow: /*.env$
+Allow: /assets/
+Allow: /assets/images/
+Allow: /blog/  # se quiser indexar o blog
+Crawl-delay: 5
+
+# Sitemap ajusta a URL para a localização real o sitemap
+Sitemap: https://portfolio-dileno.vercel.app/sitemap.xml
