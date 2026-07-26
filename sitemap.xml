@@ -11,8 +11,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-  <url>
-    <loc>https://portfolio-dileno.vercel.app/skills.html</loc>
+  <loc>https://portfolio-dileno.vercel.app/skills.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
