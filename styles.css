@@ -506,14 +506,17 @@ h3 {
     padding: 50px;
     border-radius: 20px;
     border: 1px solid var(--glass-border);
+    overflow: hidden;
 }
 
 .contact-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 15px;
     font-size: 1.2rem;
     margin-bottom: 20px;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .contact-item i {
@@ -673,17 +676,44 @@ footer {
 
     .contact-wrapper {
         flex-direction: column;
-        text-align: center;
-        gap: 30px;
+        align-items: flex-start;
+        /* Alinha o bloco de itens à esquerda */
+        text-align: left;
+        /* Remove centralização do texto */
+        gap: 0;
+        padding: 30px 20px;
+        /* Reduz padding lateral para caber na tela mobile */
+    }
+
+    .contact-info {
+        width: 100%;
+        /* Ocupa toda a largura do card */
     }
 
     .contact-item {
-        justify-content: center;
+        justify-content: flex-start;
+        /* Ícone e texto alinhados à esquerda */
+        flex-wrap: nowrap;
+        font-size: 1rem;
+        word-break: break-all;
+        max-width: 100%;
+        margin-bottom: 15px;
+        /* Espaço entre cada item */
     }
 }
 
 /* Telas pequenas/Small Screens (max-width: 480px) */
 @media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+        /* Reduz padding lateral para telas muito pequenas */
+    }
+
+    .section {
+        padding: 60px 0;
+        /* Reduz espaçamento vertical das seções */
+    }
+
     .name {
         font-size: 2.2rem;
     }
@@ -708,7 +738,31 @@ footer {
     }
 
     .project-card {
-        margin: 0 10px;
+        margin: 0;
+        /* Remove margem lateral para evitar overflow */
+    }
+
+    .contact-wrapper {
+        padding: 25px 15px;
+        /* Padding ainda menor para telas muito pequenas */
+        border-radius: 15px;
+    }
+
+    .contact-item {
+        font-size: 0.9rem;
+        /* Fonte menor para caber o e-mail completo */
+        gap: 10px;
+    }
+
+    .contact-item a {
+        word-break: break-all;
+        /* Quebra e-mail longo em telas pequenas */
+    }
+
+    footer {
+        margin-top: 40px;
+        padding: 0 10px;
+        /* Evita que o texto do rodapé transborde */
     }
 }
 
@@ -744,6 +798,7 @@ footer {
     background: white;
     transform: translateY(-5px);
 }
+
 /* Serviços */
 .services-grid {
     display: grid;
@@ -803,4 +858,3 @@ footer {
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
 }
-
